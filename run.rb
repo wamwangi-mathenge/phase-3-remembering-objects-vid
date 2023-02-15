@@ -14,6 +14,12 @@ class Song
     def self.all
         @@all
     end
+
+    def self.print_all_song_names
+        self.all.each do |song|
+            puts song.name
+        end
+    end
 end
 
 hotline_bling = Song.new("Hotline Bling")
@@ -22,6 +28,6 @@ hotline_bling = Song.new("Hotline Bling")
 thriller = Song.new("Thriller")
 # puts thriller.name
 
-puts Song.all
+# puts Song.all
 
-binding.pry
+# binding.pry
