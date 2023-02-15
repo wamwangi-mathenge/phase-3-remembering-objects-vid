@@ -1,3 +1,5 @@
+require 'pry'
+
 class Song
 
     @@all = []
@@ -8,6 +10,10 @@ class Song
         @name = name
         @@all << self
     end
+
+    def self.all
+        @@all
+    end
 end
 
 hotline_bling = Song.new("Hotline Bling")
@@ -16,4 +22,6 @@ hotline_bling = Song.new("Hotline Bling")
 thriller = Song.new("Thriller")
 # puts thriller.name
 
-Song.all
+puts Song.all
+
+binding.pry
